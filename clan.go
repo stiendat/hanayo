@@ -52,7 +52,7 @@ func leaveClan(c *gin.Context) {
 		// ควยไม่สร้างแม่งละสัส :c
 		db.Exec("DELETE FROM clans WHERE id = ?", i)
 		
-		addMessage(c, successMessage{T(c, "You clan has been disbanded")})
+		addMessage(c, successMessage{T(c, "Your clan has been disbanded")})
 		getSession(c).Save()
 		c.Redirect(302, "/clans?mode=0")
 	}
