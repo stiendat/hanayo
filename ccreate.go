@@ -104,4 +104,4 @@ func ccin(s string, ss []string) bool {
 	return false
 }
 
-var cnameRegex = regexp.MustCompile(`^[A-Za-z0-9 _\[\]-]{2,15}$`)
+var cnameRegex = regexp.MustCompile(`^[A-Za-z0-9 '_\[\]-]{2,15}$`)
