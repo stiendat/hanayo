@@ -76,7 +76,6 @@ a.inherit:hover {
 }
 
 .footer {
-	border-top: 1px solid #bbb;
 	padding: 10px 20px;
 }
 
@@ -125,10 +124,10 @@ a.inherit:hover {
 }
 
 .white.background {
-	background-color: #FFF !important;
+	background-color: transparent !important;
 }
 body.ds .white.background {
-	background-color: #454545 !important;
+	background-color: transparent !important;
 }
 
 .user.avatar {
@@ -172,10 +171,10 @@ body.ds .white.background {
 }
 
 .subtitle, .about.title {
-	color: rgba(0,0,0,.6);
+	color: rgba(255,255,255,.6);
 }
 .subtitle b {
-	color: rgba(0,0,0,.87);
+	color: #FFF;
 }
 
 /* ds = Dark Site */
