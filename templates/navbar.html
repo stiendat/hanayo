@@ -1,11 +1,12 @@
 {{ define "navbar" }}
 {{ $isRAP   := and (hasAdmin .Context.User.Privileges) (isRAP .Path) }}
 {{ $isAdmin := hasAdmin .Context.User.Privileges }}
+{{ $isClan := qb "SELECT user, clan FROM user_clans WHERE user = ?" .Context.User.ID }}
 {{ $ds      := band .ClientFlags 1 }}
 <div class="ui secondary fixed-height stackable white background main menu no margin bottom{{ if .DisableHH }} dropped{{ end }}" id="navbar">
 	<div class="ui container">
 		<div class="item">
-			<b><a href="/" title="{{ .T "Home page" }}"><img class="ripple logo" src="/static/logos/text-{{ if $ds }}white{{ else }}black{{ end }}.png" alt="Ripple"></a></b>
+			<b><a href="/" title="{{ .T "Home page" }}"><img class="ripple logo" src="/static/logos/text-{{ if $ds }}white{{ else }}black{{ end }}.png" alt="Ainu"></a></b>
 		</div>
 		{{ if $isRAP }}
 			{{/*
@@ -22,10 +23,9 @@
 					{{ navbarItem .Path (.T "About") "/about" }}
 					{{ navbarItem .Path (.T "Rules") "/doc/rules" }}
 					{{ navbarItem .Path (.T "Documentation") "/doc" }}
-					{{ navbarItem .Path (.T "Server switcher") "https://mu.nyodev.xyz/upd.php?id=18" }}
+					{{ navbarItem .Path (.T "Server switcher") "/static/switcher.exe" }}
 					<div class="divider"></div>
-					{{ navbarItem .Path (.T "Chat (Discord)") .Conf.DiscordServer }}
-					{{ navbarItem .Path (.T "Contact support") "https://support.ripple.moe" }}
+					{{ navbarItem .Path (.T "osu!Ainu! Discord") .Conf.DiscordServer }}
 				</div>
 			</div>
 			{{ if .Context.User.Username }}
@@ -39,15 +39,22 @@
 				<span>{{ .T "Clans" }}</span>
 				<div class="menu">
 					{{ navbarItem .Path (.T "Clan Leaderboard") "/clans?mode=0" }}
+					{{ if ($isClan) }}
 					{{ navbarItem .Path (.T "Clan Settings") "/settings/clansettings" }}
+					{{ else }}
+					{{ end }}
+					{{ if ($isClan) }}
+					{{ else }}
 					<div class="divider"></div>
 					{{ navbarItem .Path (.T "Create Clan") "/clans/create" }}
+					{{ end }}
 				</div>
 			</div>
 			{{ end }}
 			{{ navbarItem .Path (.T "Donate" | printf "<i class=\"red heart icon\"></i>%s") "/donate" }}
-			{{ if $isAdmin }}{{ navbarItem .Path (.T "RAP" | printf "<b>%s</b>") "https://old.ripple.moe/index.php?p=100" }}{{ end }}
-		{{ end }}
+			{{ navbarItem .Path (.T "Kawata" | printf "<i class=\"blue mouse pointer icon\"></i>%s") "http://kawata.pw" }}
+			{{ if $isAdmin }}{{ navbarItem .Path (.T "AAP" | printf "<b>%s</b>") "https://old.bigtu.vip/index.php?p=100" }}{{ end }}
+			{{ end }}
 		<div class="firetrucking-right-menu">
 			<div class="item">
 				<div class="ui search" id="user-search">
