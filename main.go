@@ -282,7 +282,7 @@ func generateEngine() *gin.Engine {
 	r.POST("/clans/create", ccreateSubmit)
 
 	r.GET("/u/:user", userProfile)
-	r.GET("/c/:uid", clanPage)
+	r.GET("/c/:cid", clanPage)
 	r.GET("/b/:bid", beatmapInfo)
 
 	r.POST("/pwreset", passwordReset)
