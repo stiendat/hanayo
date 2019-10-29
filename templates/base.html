@@ -99,11 +99,11 @@
 			</div>
 <p>
 <br />
-		<center><div class="footer">
+		<center><div class="footer twemoji">
 			
 			<font style='color:black'>
-			{{ if $ds }}<font style='color:white'>{{ end }}
-			{{ .T " Ripple, osu!Ainu &copy; %d, Made with love by Aoba <3" (curryear) | html }}  |
+			{{ if $ds }}<font style='color:white' >{{ end }}
+			{{ .T "&copy; 2018-%d Ripple, osu!Ainu, Made with love by Aoba ❤ using Hanayo %s" (curryear) (version) | html }}  |
 			<div class="ui scrolling dropdown" style="margin-left: 5px;" id="language-selector">
 				{{ $lang := .Context.Language }}
 				{{ with $lang }}
