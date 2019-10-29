@@ -118,18 +118,18 @@ func main() {
 	}
 
 	var configDefaults = map[*string]string{
-		&config.ListenTo:         ":45221",
+		&config.ListenTo:         ":6969",
 		&config.CookieSecret:     rs.String(46),
-		&config.AvatarURL:        "https://a.ripple.moe",
-		&config.BaseURL:          "https://ripple.moe",
-		&config.BanchoAPI:        "https://c.ripple.moe",
-		&config.CheesegullAPI:    "https://storage.ripple.moe/api",
+		&config.AvatarURL:        "https://a.bigtu.vip",
+		&config.BaseURL:          "https://bigtu.vip",
+		&config.BanchoAPI:        "https://c.bigtu.vip",
+		&config.CheesegullAPI:    "https://storage.bigtu.vip/api",
 		&config.API:              "http://localhost:40001/api/v1/",
 		&config.APISecret:        "Potato",
 		&config.IP_API:           "https://ip.zxq.co",
-		&config.DiscordServer:    "#",
-		&config.MainRippleFolder: "/home/ripple/ripple",
-		&config.MailgunFrom:      `"Ripple" <noreply@ripple.moe>`,
+		&config.DiscordServer:    "https://discord.gg/Qp3WQU8",
+		&config.MainRippleFolder: "/root/ripple/",
+		&config.MailgunFrom:      `"Ainu" <noreply@ripple.moe>`,
 	}
 	for key, value := range configDefaults {
 		if *key == "" {
@@ -277,8 +277,12 @@ func generateEngine() *gin.Engine {
 	r.POST("/register", registerSubmit)
 	r.GET("/register/verify", verifyAccount)
 	r.GET("/register/welcome", welcome)
+	
+	r.GET("/clans/create", ccreate)
+	r.POST("/clans/create", ccreateSubmit)
 
 	r.GET("/u/:user", userProfile)
+	r.GET("/c/:uid", clanPage)
 	r.GET("/b/:bid", beatmapInfo)
 
 	r.POST("/pwreset", passwordReset)
@@ -303,6 +307,11 @@ func generateEngine() *gin.Engine {
 	r.POST("/settings/2fa/totp", totpSetup)
 	r.GET("/settings/discord/finish", discordFinish)
 	r.POST("/settings/profbackground/:type", profBackground)
+	
+	r.POST("/settings/clansettings", createInvite)
+	r.POST("settings/clansettings/k", clanKick)
+	r.GET("/clans/invite/:inv", clanInvite)
+	r.POST("/c/:cid", leaveClan)
 
 	r.POST("/dev/tokens/create", createAPIToken)
 	r.POST("/dev/tokens/delete", deleteAPIToken)
@@ -322,7 +331,7 @@ func generateEngine() *gin.Engine {
 	r.Any("/blog/*url", blogRedirect)
 
 	r.GET("/help", func(c *gin.Context) {
-		c.Redirect(301, "https://support.ripple.moe")
+		c.Redirect(301, "https://discord.gg/Qp3WQU8")
 	})
 
 	loadSimplePages(r)
@@ -333,5 +342,5 @@ func generateEngine() *gin.Engine {
 }
 
 const alwaysRespondText = `Ooops! Looks like something went really wrong while trying to process your request.
-Perhaps report this to a Ripple developer?
+Perhaps report this to a Ainu developer?
 Retrying doing again what you were trying to do might work, too.`
