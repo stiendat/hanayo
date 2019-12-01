@@ -5,15 +5,22 @@ KyutGrill=leaderboard2.jpg
 */}}
 {{ define "tpl" }}
 <div class="ui container">
+	{{ $user := . }}
 	{{ $favModeRaw := .Get "users/self/favourite_mode" }}
 	{{ $favMode := _or (atoi (.Gin.Query "mode")) $favModeRaw.favourite_mode (float 0) }}
 	<script>
 		var favouriteMode = {{ $favMode }};
+		var rx = {{ .Gin.Query "rx" | atoint | atLeastOne }};
 		var page = {{ .Gin.Query "p" | atoint | atLeastOne }};
 		var country = {{ .Gin.Query "country" }}.toLowerCase();
 		if (country.length != 2)
 			country = "";
 	</script>
+	<div class="ui two item menu" id="rx-menu">
+			<a class="0 item" data-rx="0" href="/leaderboard?rx=0">Regular</a>
+			<a class="1 item" data-rx="1" href="/leaderboard?rx=1">Relax</a>
+	</div>
+
 	<div class="ui four item menu" id="mode-menu">
 		{{ range $k, $v := modes }}
 			<a class="{{ favMode $favMode $k }}item" data-mode="{{ $k }}" href="/leaderboard?mode={{ $k }}">{{ $v }}</a>
@@ -29,7 +36,7 @@ KyutGrill=leaderboard2.jpg
 		<thead>
 			{{ template "simplepag" 5 }}
 			<tr>
-				<th class="two wide">{{ .T "Rank" }} </th>
+				<th class="two wide"> {{ .T "Rank" }} </th>
 				<th class="four wide">{{ .T "Player" }} </th>
 				<th class="four wide">{{ .T "PP/Score" }} </th>
 				<th class="three wide">{{ .T "Accuracy" }} </th>
