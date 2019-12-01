@@ -4,7 +4,7 @@
 		{{ $aoba := eq .UserID 1000 }}
 		{{ $gqm := atoi (.Gin.Query "mode") }}
 		{{ $global := . }}
-		{{ with (.Get "users/full?id=%d" .UserID) }}
+		{{ with (.Get "users/rxfull?id=%d" .UserID) }}
 			{{ $favouritemode := _or $gqm .favourite_mode }}
 			<script>
 				window.favouriteMode = {{ $favouritemode }};
@@ -143,7 +143,7 @@ starteffect()
 								{{ $global.T "(aka <b>%s</b>)" (.username_aka | htmlescaper) | html }}
 							</div>
 						{{ end }}
-						{{ with bget "isOnline?id=%.0f" .id }}
+						{{ with bgetv1 "isOnline?id=%.0f" .id }}
 							<div class="subtitle">
 								<i class="{{ if .result }}green{{ else }}grey{{ end }} circle icon"></i>
 								{{ if .result }}{{ $global.T "Online" }}{{ else }}{{ $global.T "Offline" }}{{ end }}

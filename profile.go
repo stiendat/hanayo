@@ -111,7 +111,7 @@ func relaxProfile(c *gin.Context) {
 	data := new(profileData)
 	data.UserID = userID
 
-	defer resp(c, 200, "rxprofile.html", data)
+	defer resp(c, 200, "profile_rx.html", data)
 
 	if data.UserID == 0 {
 		data.TitleBar = "User not found"
