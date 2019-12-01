@@ -371,6 +371,7 @@ function loadScoresPage(type, mode) {
 		mode: mode,
 		p: page,
 		l: limit,
+		rx: 1,
 		id: userID,
 	}, function(r) {
 		if (r.scores == null) {
