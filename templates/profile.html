@@ -181,7 +181,7 @@ starteffect()
 			{{ $user := . }}
 			<div class="ui two item bottom attached menu" id="rx-menu">
 					<a class="0 item" data-rx="0" href="/u/{{ $user.id }}">Regular</a>
-					<a class="1 item" data-rx="1" href="/u/rx/{{ $user.id }}">Relax (WIP)</a>
+					<a class="1 item" data-rx="1" href="/rx/u/{{ $user.id }}">Relax</a>
 			</div>
 			<div class="ui four item bottom attached menu" id="mode-menu">
 				{{ range $k, $v := modes }}
