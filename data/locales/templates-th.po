@@ -191,7 +191,7 @@ msgstr "ยินดีด้วยที่ไม่อ่านอะไรเ
 msgid "Multiaccounts are not allowed on Ainu!"
 msgstr "รู้อะไรไหมว่าการสร้างบัญชีหลายๆบัญชีในเว๊ปอะไม่ดีนะ"
 
-msgid "Your new account has been <b>banned</b> and your main account has been <b>restricted</b>. You can appeal in a month by sending an email to <b><a href='https://support.bigtu.vip'>support.bigtu.vip</a></b>. You better read the rules next time."
+msgid "Your new account has been <b>banned</b> and your main account has been <b>restricted</b>. You can appeal in a month by sending an email to <b><a href='https://support.ainu.pw'>support.ainu.pw</a></b>. You better read the rules next time."
 msgstr ""
 
 msgid "Welcome to Ainu!"
@@ -274,7 +274,7 @@ msgstr "ถ้าคุณคือ %s บอกเลยว่าสร้า�
 msgid "If you're not %s, but you're using %s's computer, please sign up on Ainu! from your own computer."
 msgstr "ถ้าคุณไม่ใช่ %s ละก็ แต่คุณกำลังใช้คอม %s อยู่ ไปสมัครที่คอมคุณเถอะนะ"
 
-msgid "If you live with %s and you don't have your own computer from which to sign up on Ainu!, then please contact support@bigtu.vip, and we'll deal with your specific case."
+msgid "If you live with %s and you don't have your own computer from which to sign up on Ainu!, then please contact support@ainu.pw, and we'll deal with your specific case."
 msgstr "ถ้าคุณอยู่กับ %s แต่คุณไม่มีคอมเล่นแต่อยากจะเล่นกับเซิร์ฟเวอร์เรา กรุณาติดต่อเราที่ดิสคอร์ดเดี๋ยวเราไปคุยเอง"
 
 msgid "This warning may pop up also if you're using another computer on the same network of %s. As long as you're not using the same computer, you should be all good."
@@ -409,7 +409,7 @@ msgstr "ว่าไง %s!"
 msgid "Welcome back to Ainu! We currently have <b>%s online users and %s total registered users.</b> Nice day to farm a few maps, isn't it?"
 msgstr "ยินดีต้อนรับสู่เซิร์ฟเวอร์ osu!thailand ตอนนี้เรามี <b>คนทั้งหมด %s คนที่กำลังออนไลน์อยู่ และ คนที่สมัครเข้าเซิร์ฟแล้ว %s คน</b> เป็นวันที่ดีสำหรับการฟาร์มแมพเลยว่ามั้ย?"
 
-msgid "Latest news from our <a href='https://blog.bigtu.vip'>blog</a>"
+msgid "Latest news from our <a href='https://blog.ainu.pw'>blog</a>"
 msgstr "ข่าวสารล่าสุดจากพวกเรา"
 
 # base.html
@@ -872,7 +872,7 @@ msgstr ""
 msgid "Think about <b>spicing your profile up with some eggplants</b>? Got you covered! Having donor privileges, you get to be able to change your profile background."
 msgstr ""
 
-msgid "Want to start over one more time? With donor you can! Normally you can only <a href='https://support.bigtu.vip' target='_blank'>request an account wipe</a> once, but having donated you'll be able to do it once again."
+msgid "Want to start over one more time? With donor you can! Normally you can only <a href='https://support.ainu.pw' target='_blank'>request an account wipe</a> once, but having donated you'll be able to do it once again."
 msgstr ""
 
 msgid "<b>Who knows</b> what we could implement next? You could be able to do even <i>more</i> stuff for donors once we implement it."
@@ -899,13 +899,13 @@ msgstr ""
 msgid "Send %s BTC to this Bitcoin address:"
 msgstr ""
 
-msgid "Afterwards, <b>please send an email to <a href=\"mailto:howl@bigtu.vip\">howl@bigtu.vip</a></b> containing the transaction hash!"
+msgid "Afterwards, <b>please send an email to <a href=\"mailto:howl@ainu.pw\">howl@ainu.pw</a></b> containing the transaction hash!"
 msgstr ""
 
 msgid "I've donated, now what?"
 msgstr ""
 
-msgid "You'll have to wait until we verify and process your payment. It can take up to <b>12 hours</b>. If 12 hours have passed and you still haven't received your Donor tag, contact a <b>Dev/Community Manager</b> in our Discord server or send an email to <b><a href=\"mailto:support@bigtu.vip\">support@bigtu.vip</a></b>. Once we have processed your payment, you'll receive an <b>email</b> to the address you've used to sign up and you'll get <b>all the donor privileges, except the Discord ones</b>. To get the Discord donor privileges, go <a href=\"/settings/discord\">here</a>."
+msgid "You'll have to wait until we verify and process your payment. It can take up to <b>12 hours</b>. If 12 hours have passed and you still haven't received your Donor tag, contact a <b>Dev/Community Manager</b> in our Discord server or send an email to <b><a href=\"mailto:support@ainu.pw\">support@ainu.pw</a></b>. Once we have processed your payment, you'll receive an <b>email</b> to the address you've used to sign up and you'll get <b>all the donor privileges, except the Discord ones</b>. To get the Discord donor privileges, go <a href=\"/settings/discord\">here</a>."
 msgstr ""
 
 msgid "Please log in to get supporter"
@@ -1126,7 +1126,7 @@ msgstr "สี"
 msgid "Colour is invalid"
 msgstr "สีบ้าอะไรเนี่ย!?"
 
-msgid "You have been automatically logged out of your account because your account has either been banned or locked. Should you believe this is a mistake, you can contact our support team at support@bigtu.vip."
+msgid "You have been automatically logged out of your account because your account has either been banned or locked. Should you believe this is a mistake, you can contact our support team at support@ainu.pw."
 msgstr ""
 
 msgid "You have been automatically logged out for security reasons. Please <a href='/login?redir=%s'>log back in</a>."
@@ -1193,7 +1193,7 @@ msgstr ""
 msgid "Community Managers deal with bans, silences, name changes and pretty much everything that has to do with the community."
 msgstr ""
 
-msgid "They take care of our Discord server and reply to emails sent to the support services (email and support.bigtu.vip). Community Managers have a red name in the in-game chat."
+msgid "They take care of our Discord server and reply to emails sent to the support services (email and support.ainu.pw). Community Managers have a red name in the in-game chat."
 msgstr ""
 
 msgid "Developers"
@@ -1244,7 +1244,7 @@ msgstr ""
 msgid "They told me these are very cool people."
 msgstr ""
 
-msgid "Looking for how you should contact our team? Check out <a href='https://support.bigtu.vip/'>this page</a>."
+msgid "Looking for how you should contact our team? Check out <a href='https://support.ainu.pw/'>this page</a>."
 msgstr ""
 
 msgid "And more..."
