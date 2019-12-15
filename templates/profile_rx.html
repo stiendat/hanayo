@@ -288,6 +288,10 @@ starteffect()
 												<td class="right aligned">{{ humanize .playcount }}</td>
 											</tr>
 											<tr>
+												<td><b>{{ $global.T "Followers" }}</b></td>
+												<td class="right aligned">{{ with $.Get "users/followers?userid=%d" $.UserID }} {{ .subscount }} {{ end }} </td>
+											</tr>
+											<tr>
 												<td><b>{{ $global.T "Replays watched" }}</b></td>
 												<td class="right aligned">{{ humanize .replays_watched }}</td>
 											</tr>
