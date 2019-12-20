@@ -5,7 +5,13 @@
 <!DOCTYPE html>
 <html>
 	<head>
-
+	{{ $s := systemSettings "website_maintenance" "game_maintenance" "website_global_alert" }}
+		{{ with $s.website_maintenance.Int }}
+		<link rel="stylesheet" type="text/css" href="/static/maintenance.css?{{ unixNano }}">
+		<script src="https://kit.fontawesome.com/fdf0b80f23.js" crossorigin="anonymous"></script>
+		<title>Maintenance - Ainu</title>
+	</head>
+	{{ else }}
 		<noscript>
 		<style>
 			/**
@@ -38,6 +44,23 @@
 	</style -->
 
 	</head>
+	{{ end }}
+	{{ $s := systemSettings "website_maintenance" "game_maintenance" "website_global_alert" }}
+	{{ with $s.website_maintenance.Int }}
+	<body class="maintenance">
+		<div class="container">
+			<div class="text-big">
+				<i class="fas fa-cogs"></i>
+			</div>
+			<p class="text-small">
+			The website is in maintenance.
+			</p>
+			<p class="text-evensmaller">
+				We are either working on implementing stuff or fixing bugs. It can take up to 10 minutes to a couple of hours.
+			</p>
+		</div>
+	</body>
+	{{ else }}
 	<body {{ if $ds }} class="ds"{{ end }}>
 		{{/*
 			If we're asked to disable the hugeheading, but a KyutGrill is set, it will become the background of the page.
@@ -85,11 +108,6 @@
 				{{ with $settings.game_maintenance.Int }}
 					<div class="ui warning message">
 						{{ $.T "Ainu!'s score submission is currently in maintenance mode. You will not be allowed to submit scores for the time being." }}
-					</div>
-				{{ end }}
-				{{ with $settings.website_maintenance.Int }}
-					<div class="ui warning message">
-						{{ $.T "The Ainu! website is currently in maintenance mode. Only certain users are allowed to access the full website." }}
 					</div>
 				{{ end }}
 				</div>
