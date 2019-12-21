@@ -423,7 +423,7 @@ msgid "Your account is currently in restricted mode. You will not be able to do 
 msgstr "บัญชีคุณตอนนี้กำลังถูกระงับ! คุณจะไม่สามารถทำอะไรได้และคุณจะถูกเห็นโดยคุณเองและทีมงาน osu!thailand เท่านั้น! ถ้าคุณรู้สึกว่าเราทำอะไรผิดพลาดไป คุณสามารถลองขอปลดได้ที่ <a href='https://discord.gg/CEjWW4K'>ดิสคอร์ดของพวกเราได้เลย!</a>."
 
 msgid "&copy; 2018-%d Ripple, osu!Ainu, Made with love by Aoba ❤ using Hanayo %s"
-msgstr "&copy; %d osu!thailand, สร้างโดย <a href='https://www.facebook.com/NatsueKunGz'>สัณหปรรณ อนันเต่า</a> %s"
+msgstr "&copy; %d osu!thailand, สร้างโดย <a href='https://www.facebook.com/100006238846620'>สัณหปรรณ อนันเต่า</a> %s"
 
 msgid "Team"
 msgstr "ทีมงาน"
