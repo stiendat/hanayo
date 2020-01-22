@@ -17,15 +17,6 @@
 			*/}}
 		{{ else }}
 			{{ navbarItem .Path (.T "Leaderboard") "/leaderboard" }}
-			<div class="ui dropdown item">
-				<span>{{ .T "Community" }}</span>
-                <div class="menu">
-                    {{ navbarItem .Path (.T "Multiplayer listing") "https://multi.ainu.pw" }}
-                    {{/* {{ navbarItem .Path (.T "Tournaments") "https://tourn.ainu.pw" }} */}}
-                    <div class="divider"></div>
-                    {{ navbarItem .Path (.T "Discord Server") .Conf.DiscordServer }}
-                </div>
-            </div>
             <div class="ui dropdown item">
 				<span>{{ .T "Help" }}</span>
 				<div class="menu">
@@ -59,7 +50,7 @@
 			</div>
 			{{ end }}
 			{{ navbarItem .Path (.T "Donate" | printf "<i class=\"red heart icon\"></i>%s") "/donate" }}
-			{{ if $isAdmin }}{{ navbarItem .Path (.T "AAP" | printf "<b>%s</b>") "https://old.ainu.pw/index.php?p=100" }}{{ end }}
+			{{ if $isAdmin }}{{ navbarItem .Path (.T "AAP" | printf "<b>%s</b>") "https://old.osuvnfc.xyz/index.php?p=100" }}{{ end }}
 			{{ end }}
 		<div class="firetrucking-right-menu">
 			<div class="item">

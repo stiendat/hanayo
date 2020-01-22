@@ -79,7 +79,7 @@
 				<noscript>Research has proven this website works 10000% better if you have JavaScript enabled.</noscript>
 				{{ if and .Context.User.Username (not (has .Context.User.Privileges 1)) }}
 					<div class="ui warning message">
-						{{ $.T "Your account is currently in restricted mode. You will not be able to do certain actions, and your profile can only be seen by you and by Ainu!'s staff. If you believe we have mistaken putting you in restricted mode, or a month has passed since you first saw this, then you can send an appeal at <a href='https://discord.gg/CEjWW4K'>our Discord</a>." | html }}
+						{{ $.T "Your account is currently in restricted mode. You will not be able to do certain actions, and your profile can only be seen by you and by OsuVNFC!'s staff. If you believe we have mistaken putting you in restricted mode you can send an appeal by DM me on Discord @stiendat#8017</a>." | html }}
 					</div>
 				{{ end }}
 				{{ if .Messages }}
@@ -98,7 +98,7 @@
 				{{ end }}
 				{{ with $settings.game_maintenance.Int }}
 					<div class="ui warning message">
-						{{ $.T "Ainu!'s score submission is currently in maintenance mode. You will not be allowed to submit scores for the time being." }}
+						{{ $.T "Osu!'s score submission is currently in maintenance mode. You will not be allowed to submit scores for the time being." }}
 					</div>
 				{{ end }}
 				</div>
@@ -110,7 +110,7 @@
 			
 			<font style='color:black'>
 			{{ if $ds }}<font style='color:white' >{{ end }}
-			{{ .T "&copy; 2018-%d Ripple, osu!Ainu, Made with love by Aoba ❤ using Hanayo %s" (curryear) (version) | html }}  |
+			{{ .T "&copy; 2018-%d Ripple, osu!Ainu, Made by Aoba ❤ and modification for this was made by Osu!VNFC team and a huge support from Nightsh0t from atoka.pw, Hanayo %s" (curryear) (version) | html }}  |
 			<div class="ui scrolling dropdown" style="margin-left: 5px;" id="language-selector">
 				{{ $lang := .Context.Language }}
 				{{ with $lang }}

@@ -89,7 +89,7 @@ AdditionalJS=https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/9.0.0/nouislider.
 					</div>
 					<div class="five wide column">
 						<h3 class="ui header">{{ $.T "Account wipe" }}</h3>
-						{{ $.T "Want to start over one more time? With donor you can! Normally you can only <a href='https://discord.gg/Qp3WQU8' target='_blank'>request an account wipe</a> once, but having donated you'll be able to do it once again." | html }}
+						{{ $.T "Want to start over one more time? With donor you can! Normally you can only request an account wipe once, but having donated you'll be able to do it once again." | html }}
 					</div>
 					<div class="five wide column">
 						<h3 class="ui header">{{ $.T "More to come!" }}</h3>
@@ -122,7 +122,7 @@ AdditionalJS=https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/9.0.0/nouislider.
 								<input type="hidden" name="option_select{{ . }}" value="{{ $months }} month{{ if . }}s{{ end }}">
 								<input type="hidden" name="option_amount{{ . }}" value="{{ calculateDonorPrice $months }}">
 							{{ end }}
-							<input type="hidden" name="on1" value="Ainu! user to give donor">
+							<input type="hidden" name="on1" value="OsuVNFC! user to give donor">
 							<input type="hidden" name="custom" value="username={{ $global.User.Username }}" id="ipn-username">
 							<input type="hidden" name="amount" value="{{ calculateDonorPrice 1 }}" id="paypal-amt">
 							<div class="ui fluid labeled action input">
@@ -134,18 +134,18 @@ AdditionalJS=https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/9.0.0/nouislider.
 							</div>
 							{{ $ief }}
 							<input type="hidden"
-							name="business" value="zunhapan@gmail.com">
+							name="business" value="stiendat1998@gmail.com">
 							<input type="hidden" name="cmd" value="_xclick">
 							<input type="hidden" name="lc" value="GB">
 							<input type="hidden" name="no_note" value="0">
-							<input type="hidden" name="currency_code" value="EUR">
+							<input type="hidden" name="currency_code" value="VND">
 							<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
 						</form>
 				
 				<h4 class="ui horizontal divider header">
 					{{ $.T "I've donated, now what?" }}
 				</h4>
-				{{ $.T "You'll have to wait until we verify and process your payment. It can take up to <b>12 hours</b>. If 12 hours have passed and you still haven't received your Donor tag, contact a <b>Dev/Community Manager</b> in our Discord server or send an email to <b><a href=\"mailto:thailandosu@gmail.com\">thailandosu@gmail.com</a></b> or <b><a href=\"mailto:neko.aoba.suzukaze@gmail.com\">neko.aoba.suzukaze@gmail.com</a></b>. Once we have processed your payment, you'll receive an <b>email</b> to the address you've used to sign up and you'll get <b>all the donor privileges, except the Discord ones</b>. To get the Discord donor privileges, Go to the Discord and PM Administrator/Community Manager." | html }}
+				{{ $.T "You'll have to wait until we verify and process your payment. It can take up to <b>12 hours</b>. If 12 hours have passed and you still haven't received your Donor tag, contact @stiendat#8017 on Discord. Once we have processed your payment, you'll get all the donor privileges" | html }}
 			{{ else }}
 				<div class="ui divider"></div>
 				<h1 class="ui center aligned header">{{ $.T "Please log in to get supporter" }}</h1>

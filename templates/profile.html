@@ -247,7 +247,7 @@ starteffect()
 								</a>
 							{{ end }}
 							{{ if hasAdmin $global.Context.User.Privileges }}
-								<a href="https://old.ainu.pw/index.php?p=103&id={{ $global.UserID }}"
+								<a href="https://old.osuvnfc.xyz/index.php?p=103&id={{ $global.UserID }}"
 									target="_blank" title="Quick edit" class="ui circular mini blue icon button">
 									<i class="folder open outline icon"></i>
 								</a>
@@ -307,10 +307,10 @@ starteffect()
 						</div>
 						
  							<meta property="og:type" content="website" />
-							<meta property="og:url" content="https://ainu.pw/u/{{$user.id}}" />
+							<meta property="og:url" content="https://osuvnfc.xyz/u/{{$user.id}}" />
 							<meta property="og:title" content={{ $global.T "<b>%s</b>" .username}} />
 							<meta property="og:description" content={{ $global.T "<b>%s</b> is a osu!Ainu player from <b>%s</b>." .username (country .country true)}} />
-							<meta property="og:image" content="https://a.ainu.pw/{{$user.id}}" />
+							<meta property="og:image" content="https://a.osuvnfc.xyz/{{$user.id}}" />
 							
 						<div class="column">
 							{{ if and (not .badges) (not .custom_badge) }}
