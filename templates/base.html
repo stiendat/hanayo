@@ -1,11 +1,18 @@
-{{ define "base" }}
+	{{ define "base" }}
 {{ $cf := .ClientFlags }}
 {{ $ds := band $cf 1 }}
 {{ $   := . }}
 <!DOCTYPE html>
 <html>
 	<head>
-
+		{{ $s := systemSettings "website_maintenance" "game_maintenance" "website_global_alert" }}
+		{{ with $s.website_maintenance.Int }}
+		<link rel="stylesheet" type="text/css" href="/static/maintenance.css?{{ unixNano }}">
+		<script src="https://kit.fontawesome.com/fdf0b80f23.js" crossorigin="anonymous"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Maintenance - Ainu</title>
+	</head>
+		{{ else }}
 		<noscript>
 		<style>
 			/**
@@ -22,12 +29,13 @@
 		</style>
 		</noscript>
 		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<title>{{ if .TitleBar }}{{ .T .TitleBar }}{{ end }} {{ .T "- Ainu" }}</title>
 
 		<link rel="stylesheet" type="text/css" href="/static/{{ if $ds }}dark/{{ end }}semantic.min.css?{{ unixNano }}">
 		<link rel="stylesheet" type="text/css" href="/static/ripple.css?{{ unixNano }}">
+		<link rel="stylesheet" type="text/css" href="/static/snow.css">
 		
 		<!-- style type="text/css">
 	html, body {
@@ -36,8 +44,24 @@
 		overflow-x: hidden;
 		}
 	</style -->
-
+	{{ end }}
 	</head>
+	{{ $s := systemSettings "website_maintenance" "game_maintenance" "website_global_alert" }}
+	{{ with $s.website_maintenance.Int }}
+	<body class="maintenance">
+		<div class="container">
+			<div class="text-big">
+				<i class="fas fa-cogs"></i>
+			</div>
+			<p class="text-small">
+			The website is in maintenance.
+			</p>
+			<p class="text-evensmaller">
+				We are either working on implementing stuff or fixing bugs. It can take up to 10 minutes to a couple of hours.
+			</p>
+		</div>
+	</body>
+	{{ else }}
 	<body {{ if $ds }} class="ds"{{ end }}>
 		{{/*
 			If we're asked to disable the hugeheading, but a KyutGrill is set, it will become the background of the page.
@@ -52,6 +76,16 @@
 			{{ end }}>
 			{{ template "navbar" . }}
 			{{ if not .DisableHH }}
+			<div id="snow-container">
+				<div>
+					<div class="snow large"></div>
+					<div class="snow large delayed"></div>
+					<div class="snow medium"></div>
+					<div class="snow medium delayed"></div>
+					<div class="snow small"></div>
+					<div class="snow small delayed"></div>
+				</div>
+			</div>
 				<div class="huge heading {{ if .HeadingOnRight }}right{{ end }} dropped"
 					style="background-image: url('{{ if .KyutGrillAbsolute }}{{ .KyutGrill }}{{ else }}/static/headers/{{ or .KyutGrill "default.jpg" }}{{ end }}');">
 					<div class="ui container">
@@ -59,7 +93,6 @@
 					</div>
 				</div>
 			{{ end }}
-
 			<div class="h-container">
 				<div class="ui margined container" id="messages-container">
 				<noscript>Research has proven this website works 10000% better if you have JavaScript enabled.</noscript>
@@ -85,11 +118,6 @@
 				{{ with $settings.game_maintenance.Int }}
 					<div class="ui warning message">
 						{{ $.T "Ainu!'s score submission is currently in maintenance mode. You will not be allowed to submit scores for the time being." }}
-					</div>
-				{{ end }}
-				{{ with $settings.website_maintenance.Int }}
-					<div class="ui warning message">
-						{{ $.T "The Ainu! website is currently in maintenance mode. Only certain users are allowed to access the full website." }}
 					</div>
 				{{ end }}
 				</div>
@@ -150,5 +178,5 @@
     <script src="/static/simplebar.js"></script> -->
 	</body>
 </html>
-
+{{ end }}
 {{ end }}
