@@ -1,10 +1,10 @@
 {{ define "tpl" }}
 <div class="ui container">
 	<div class="ui segment">
-		{{ .T "Tài khoản của bạn đã được tạo thành công. Để xác nhận tài khoản, bạn chỉ cần <b>đăng nhập vào game là được!</b> Làm ơn hãy đăng nhập vào trong client <b><u>osu!</u></b> bằng tài khoản của bạn! <b>Hiện tại OsuVNFC! <u> không cô xác minh tài khoản bẳng E-mail</u>. All you need to do is connect to Ainu! from the osu! client!</b> nếu bạn gặp khó khăn, <a href='/doc/1'>follow this guide</a>." | html }}
+		{{ .T "Tài khoản của bạn đã được tạo thành công. Để xác nhận tài khoản, bạn chỉ cần <b>đăng nhập vào game là được!</b> Làm ơn hãy đăng nhập vào trong client <b><u>osu!</u></b> bằng tài khoản của bạn! <b>Hiện tại OsuVNFC! <u> không cô xác minh tài khoản bẳng E-mail</u>.</b> nếu bạn gặp khó khăn, <a href='/doc/1'>hãy sử dụng guide này</a>." | html }}
 	</div>
 	<div class="ui centered error  message">
-		{{ .T "<b class='big text'>Do not let anyone except yourself log into your OsuVNFC! account!</b><br> Get on our <a href='%s'>Discord server's</a> #help channel instead (after following the steps on this page) so that we can help you out if you have trouble connecting." (config "DiscordServer") | html }}
+		{{ .T "<b class='big text'Đừng để ai đăng nhập vào tài khoản OsuVNFC! của bạn</b><br> Get on our <a href='%s'>Discord server's</a> #help channel instead (after following the steps on this page) so that we can help you out if you have trouble connecting." (config "DiscordServer") | html }}
 	</div>
 	<div class="ui segment">
 		<h1 class="ui heading">{{ .T "<a href='/doc/1'>The Guide,</a> tl;dr version" | html }}</h1>
