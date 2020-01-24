@@ -18,8 +18,8 @@ msgid ""
 "An error occurred while contacting the Ripple API. Please report this to a "
 "Ripple developer."
 msgstr ""
-"Một lỗi đã phát hiện trong khi đang kết nối tới Server API của Ripple. Hãy "
-"nói điều này tới một người trong đội thành lập Ripple "
+"Một lỗi đã được phát hiện trong khi đang kết nối tới Server API của Ripple."
+"Hãy thông báo cho một admin của server."
 
 # This is a quote of UNDERTALE if you didn't know.
 # It is shown regarding the level of an user, but it is shortened to "Lv.".
@@ -28,13 +28,13 @@ msgstr ""
 # It's hard to keep this cultural reference, so you can also just write the
 # translation for "Level" in this.
 msgid "Why, LOVE, of course!"
-msgstr "Tại sao, YÊU, Chắc chắn thế!"
+msgstr "Tại sao chứ, đương nhiên là YÊU rồi!"
 
 msgid "Your new settings have been saved."
-msgstr "Sự thay đổi của bạn trong cài đặt đã được lưu lại"
+msgstr "Cài đặt của bạn đã được lưu lại."
 
 msgid "Your userpage has been saved."
-msgstr "Trang cá nhân của bạn đã được lưu"
+msgstr "Trang cá nhân của bạn đã được lưu lại."
 
 msgid ""
 "Please provide a valid link, in the form of either "
@@ -47,17 +47,17 @@ msgid "Beatmap rank request has been submitted."
 msgstr "Yêu cầu rank cho beatmap này đã được nộp lên"
 
 msgid "That beatmap is already ranked!"
-msgstr "Beatmap đó đã được ranked!"
+msgstr "Beatmap này đã được rank rồi!"
 
 # user profile
 msgid "Add friend"
-msgstr "Thêm người đó vào danh sách kết bạn"
+msgstr "Thêm người đó vào danh sách bạn"
 
 msgid "Remove friend"
-msgstr "Bỏ người đó khỏi danh sách kết bạn"
+msgstr "Xóa người đó khỏi danh sách bạn"
 
 msgid "Unmutual friend"
-msgstr "Bỏ người đó khỏi danh sách thân mật"
+msgstr "Xóa bạn chung"
 
 # score table
 msgid "General info"
@@ -67,7 +67,7 @@ msgid "Score"
 msgstr "Điểm"
 
 msgid "Load more"
-msgstr "Còn nữa"
+msgstr "Xem thêm"
 
 msgid "Best scores"
 msgstr "Điểm tốt nhất"
@@ -95,13 +95,13 @@ msgid "Max combo"
 msgstr "Combo cao nhất"
 
 msgid "(full combo)"
-msgstr "(Full combo)"
+msgstr "(full combo)"
 
 msgid "Difficulty"
 msgstr "Độ khó"
 
 msgid "Yes"
-msgstr "OK"
+msgstr "Có"
 
 msgid "No"
 msgstr "Không"
@@ -131,10 +131,10 @@ msgstr "($ {{ usd }} / BTC {{ btc }})"
 
 # (following are in relation to friends)
 msgid "Mutual"
-msgstr "Thân mật"
+msgstr "Bạn chung"
 
 msgid "Remove"
-msgstr "Bỏ"
+msgstr "Xóa"
 
 msgid "Add"
-msgstr "Thêm vào"
+msgstr "Thêm"
