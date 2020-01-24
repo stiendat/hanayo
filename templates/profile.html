@@ -2,7 +2,6 @@
 <div class="ui container">
 	{{ if .UserID }}
 		{{ $aoba := eq .UserID 1000 }}
-		{{ $simon := eq .UserID 1106 }}
 		{{ $gqm := atoi (.Gin.Query "mode") }}
 		{{ $global := . }}
 		{{ with (.Get "users/full?id=%d" .UserID) }}
@@ -52,7 +51,8 @@
 					</div>
 					<div class="table element">
 						<h1 class="ui header">
-							{{ if $aoba }}							
+							{{ $donor := (has .privileges 7) }}
+							{{ if $donor }}							
 							<b>
 
 <script>
@@ -66,7 +66,7 @@ For this script, visit http://www.javascriptkit.com
 // ********** MAKE YOUR CHANGES HERE
 
 var text='{{ .username }}' // YOUR TEXT
-var speed=80 // SPEED OF FADE
+var speed=100 // SPEED OF FADE
 
 // ********** LEAVE THE NEXT BIT ALONE!
 
@@ -125,27 +125,24 @@ flash=setInterval("change()",speed)
 }
 starteffect()
 </script>
-</b>
-							{{ else }}
-							{{ if $simon }}
-							<b>
-
-								<script>
-								
-								/*
+	{{ else }}
+	{{ if $aoba }}
+	<b>
+	<script>
+	/*
 								RAINBOW TEXT Script by Matt Hedgecoe (c) 2002
 								Featured on JavaScript Kit
 								For this script, visit http://www.javascriptkit.com
 								*/
-								
+
 								// ********** MAKE YOUR CHANGES HERE
-								
+
 								var text='{{ .username }}' // YOUR TEXT
 								var speed=80 // SPEED OF FADE
-								
+
 								// ********** LEAVE THE NEXT BIT ALONE!
-								
-								
+
+
 								if (document.all||document.getElementById){
 								document.write('<span id="highlight">' + text + '</span>')
 								var storetext=document.getElementById? document.getElementById("highlight") : document.all.highlight
@@ -201,7 +198,7 @@ starteffect()
 								starteffect()
 								</script>
 								</b>
-								
+
 							{{ else }}
 							{{ .username }}
 							{{ end }}
@@ -281,27 +278,30 @@ starteffect()
 				{{ $member := (has .privileges 3) }}
 					
 					{{ if $owner }}
-					{{ $global.T "osu!Ainu %s" "Owner" }}
+					{{ $global.T "%s" "Owner" }}
 					{{ else }}
 					{{ if $cm }}
-					{{ $global.T "osu!Ainu %s" "Community Manager" }}
+					{{ $global.T "%s" "Community Manager" }}
 					{{ else }}
 					{{ if $admin }}
-					{{ $global.T "osu!Ainu %s" "Admin" }}
+					{{ $global.T "%s" "Admin" }}
 					{{ else }}
 					{{ if $dev }}
-					{{ $global.T "osu!Ainu %s" "Developer" }}
+					{{ $global.T "%s" "Developer" }}
 					{{ else }}
 					{{ if $bat }}
-					{{ $global.T "osu!Ainu %s" "BAT" }}
+					{{ $global.T "%s" "BAT" }}
+					{{ else }}
+					{{ if $donor }}
+					{{ $global.T "%s" "Donor" }}
 					{{ else }}
 					{{ if $member }}
-					{{ $global.T "osu!Ainu %s" "Player" }}
+					{{ $global.T "%s" "Player" }}
 					{{ else }}
-					{{end}}{{end}}{{end}}{{end}}{{end}}{{end}}
+					{{end}}{{end}}{{end}}{{end}}{{end}}{{end}}{{end}}
 
 							{{ $global.T "from <b>%s</b>." (country .country true) | html }}
-							<br>{{ $global.T "They signed up on osu!Ainu %s." (time $user.registered_on) | html }}
+							<br>{{ $global.T "They signed up on %s." (time $user.registered_on) | html }}
 							<br>{{ $global.T "Last seen: %s." (time $user.latest_activity) | html }}
 							<br>{{ with playstyle .play_style $global }}{{ $global.T "They play with %s." . }}{{ end }}
 						</div>
