@@ -40,7 +40,7 @@ msgid ""
 "Please provide a valid link, in the form of either "
 "https://osu.ppy.sh/s/&lt;ID&gt; or https://osu.ppy.sh/b/&lt;ID&gt;."
 msgstr ""
-"Xin hãy cung cấp một đường liên kết còn hiệu lực, trong hình thức như "
+"Xin hãy đưa một đường link chính xác, nó sẽ trông giống như sau: "
 "https://osu.ppy.sh/s/&lt;ID&gt; hoặc là https://osu.ppy.sh/b/&lt;ID&gt;."
 
 msgid "Beatmap rank request has been submitted."
