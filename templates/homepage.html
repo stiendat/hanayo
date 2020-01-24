@@ -91,7 +91,7 @@ margin-bottom: 10px;
 	<div class="ui segment">
 		<h1 class="ui header">{{ .T "Chào mừng tới OsuVNFC!" }}</h1>
 		<p>
-		{{ .T "OsuVNFC! là một private server cho game Osu! dành cho các bạn bị ban do vi phạm luật và muốn có cơ hội làm lại cuộc đời lần thứ 2. Cach ket noi duoc ghi chi tiet trong (https://discord.gg/YdHUZFb) server Discord. <a href='/about'>About.</a> Just so you know, <b>we currently have %s users online and %s registered users!</b>" (rediget "ripple:online_users") (rediget "ripple:registered_users") | html }}
+		{{ .T "OsuVNFC! là một private server cho game osu! dành cho các bạn bị ban do vi phạm luật và muốn có cơ hội làm lại cuộc đời lần thứ 2. Cách kết nối được ghi chi tiet trong (https://discord.gg/YdHUZFb) server Discord. <a href='/about'>About.</a> Just so you know, <b>we currently have %s users online and %s registered users!</b>" (rediget "ripple:online_users") (rediget "ripple:registered_users") | html }}
 		</p>
 		<h3 class="ui header center aligned">{{ .T "What are you waiting for? Join OsuVNFC!!" | html }}</h3>
 	</div>
@@ -100,7 +100,7 @@ margin-bottom: 10px;
 		<h1 class="ui header">{{ .T "Howdy, %s!" .Context.User.Username }}</h1>
 		<p>
 			{{ $OnlineUsers := .Get "https://c.ainu.pw/api/v1/onlineUsers" }}
-			{{ .T "Welcome back to OsuVNFC! We currently have <b>%s online users and %s total registered users.</b> Do kinh phí hạn hẹp nên server hơi bị lag, nếu bạn thấy thích có thể Donate cho chúng mình để phát triển và duy trì hoạt động bằng cách DM discord mình @stiendat#8017 để biết thêm. Cảm ơn vì đã chơi trên server của mình. Server discord https://discord.gg/YdHUZFb" (rediget "ripple:online_users") (rediget "ripple:registered_users") | html }}
+			{{ .T "Welcome back to OsuVNFC! Hiện tại có <b>%s người đang online và %s tổng số người đã đăng kí.</b> Do kinh phí hạn hẹp nên server hơi bị lag, nếu bạn thấy thích có thể donate cho chúng mình để phát triển và duy trì hoạt động bằng cách DM discord mình @stiendat#8017 để biết thêm. Cảm ơn vì đã chơi trên server của mình. Server Discord https://discord.gg/YdHUZFb" (rediget "ripple:online_users") (rediget "ripple:registered_users") | html }}
 		</p>
 	</div>
 	{{ end }}
