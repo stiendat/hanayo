@@ -16,7 +16,7 @@ msgstr ""
 
 # General
 msgid "You're already logged in!"
-msgstr "Bạn đã đăng nhập rồi!!"
+msgstr "Bạn đã đăng nhập rồi!"
 
 msgid "Submit"
 msgstr "Gửi"
@@ -28,37 +28,37 @@ msgid "Password"
 msgstr "Mật khẩu"
 
 msgid "Invalid CSRF token"
-msgstr "CSRF token không hợp lệ"
+msgstr "Token CSRF không hợp lệ"
 
 msgid ""
 "Your session has expired. Please try redoing what you were trying to do."
-msgstr ""
+msgstr "Phiên của bạn đã hết hạn, vui lòng thử lại những gì bạn đang muốn làm."
 
 msgid "That user could not be found."
-msgstr "Không tìm được người dùng đó"
+msgstr "Không tìm được người dùng đó."
 
 msgid "Your settings have been saved."
-msgstr "Sự thay đổi của bạn trong cài đặt đã được lưu lại"
+msgstr "Cài đặt của bạn đã được lưu lại."
 
 # beatmaps/rank_requests.html
 msgid "Request beatmap ranking"
-msgstr ""
+msgstr "Yêu cầu rank beatmap"
 
 msgid ""
 "Want to play an unranked beatmap and get pp? You can submit beatmaps rank "
 "requests here!"
 msgstr ""
-"Bạn muốn chơi một beatmap unranked và được pp? Bạn có thể nộp yêu cầu rank "
+"Bạn muốn chơi một beatmap chưa được rank và vẫn được pp? Bạn có thể yêu cầu rank "
 "các beatmap ở đây!"
 
 msgid "Queue status"
-msgstr "Tình trạng hàng chờ hiện nay"
+msgstr "Tình trạng hàng chờ"
 
 msgid "by you"
 msgstr "bởi bạn"
 
 msgid "Requests submitted"
-msgstr "Đã gửi bài nhận xét"
+msgstr "Đã gửi yêu cầu"
 
 msgid "In the past 24 hours"
 msgstr "Trong 24 giờ qua"
@@ -67,7 +67,7 @@ msgid "Request a beatmap"
 msgstr "Yêu cầu 1 beatmap"
 
 msgid "You cannot currently request beatmaps!"
-msgstr ""
+msgstr "Hiện tại bạn không thể gửi thêm yêu cầu rank beatmap"
 
 # After this text there is a date. The date is localised separately.
 msgid "Please try again "
@@ -85,10 +85,10 @@ msgstr ""
 "hãy nhập mậy khẩu mới của bạn"
 
 msgid "Nope."
-msgstr "Không."
+msgstr "Haha, không."
 
 msgid "That key could not be found. Perhaps it expired?"
-msgstr ""
+msgstr "Key đó không thể được tìm thấy. Có thể nó đã hết hạn?"
 
 msgid ""
 "All right, we have changed your password and you should now be able to "
@@ -104,17 +104,17 @@ msgstr "Đăng ký"
 msgid ""
 "Sorry, it's not possible to register at the moment. Please try again later."
 msgstr ""
-"Xin lỗi. Nó không thể để đăng kí vào thời điểm này. Vui lòng thử lại sau."
+"Xin lỗi. Bạn không thể đăng kí tại thời điểm này. Vui lòng thử lại sau."
 
 msgid ""
 "Remember: this seems like it's your second account! Do not multiaccount, or "
 "you're likely to get restricted!"
 msgstr ""
-"Hãy nhớ: có vẻ như đây là tài khoản thứ 2 của bản! Đừng tạo nhiều account, "
-"hoặc bạn có thể sẽ bị tước đi quyền hoạt động"
+"Hãy nhớ: có vẻ như đây là tài khoản thứ 2 của bản! Đừng tạo nhiều hơn một account, "
+"hoặc bạn có khả năng sẽ bị cấm khỏi server!"
 
 msgid "Username (2 to 15 characters, alphanumeric, spaces, <code>_[]-</code>)"
-msgstr "Tên người dùng (2 đến 15 chữ, chữ số , khoảng cách , <code>_[]-</code>)"
+msgstr "Tên người dùng (từ 2 đến 15 chữ, chữ số , khoảng trống , <code>_[]-</code>)"
 
 msgid "Password (at least 8 characters)"
 msgstr "Mật khẩu (ít nhất 8 ký tự)"
@@ -130,13 +130,13 @@ msgstr ""
 "tài khoản của bạn"
 
 msgid "Your password is too short! It must be at least 8 characters long."
-msgstr "Mật khẩu của bạn quá ngắn!! (Nó phải gồm ít nhất 8 ký tự)"
+msgstr "Mật khẩu của bạn quá ngắn! (Nó phải có ít nhất 8 ký tự)"
 
 msgid ""
 "Your password is one of the most common passwords on the entire internet. No "
 "way we're letting you use that!"
 msgstr ""
-"Mật khẩu của bạn là một trong những mật khẩu dễ đoán nhất trên mạng. Chúng "
+"Mật khẩu của bạn là một trong những mật khẩu dễ đoán nhất trên internet. Chúng "
 "tôi sẽ không để bạn sử dụng mật khẩu đó đâu!"
 
 msgid ""
@@ -153,8 +153,7 @@ msgstr "Hãy gõ vào một email hợp lệ."
 
 msgid "An username can't contain both underscores and spaces."
 msgstr ""
-"Tên người dùng không thể chứa cùng lúc dấu gạch dưới và khoảng cách "
-"(Spacebar)"
+"Tên người dùng không thể chứa cùng lúc dấu gạch dưới và khoảng cách."
 
 msgid "An user with that username already exists!"
 msgstr "Đã có người dùng tên đó rồi!"
@@ -169,8 +168,8 @@ msgid ""
 "Whoops, an error slipped in. You might have been registered, though. I don't "
 "know."
 msgstr ""
-"Ờm. . Có vẻ như đã có 1 lỗi lên lỏi vào rồi. Bạn hình như đã đăng nhập rồi. "
-".Tôi cũng không biết nữa."
+"Ờm. Có vẻ như đã có 1 lỗi lên lỏi vào rồi. Bạn hình như đã đăng ký rồi. Thật ra... "
+"tôi cũng không biết nữa."
 
 # register/verify.html
 msgid "Verify account"
@@ -183,9 +182,9 @@ msgid ""
 "connect to Ripple from the osu! client!</b> If you're having trouble, <a "
 "href='/doc/1'>follow this guide</a>."
 msgstr ""
-"Tài khoản của bạn đã được tạo ra rồi, nhưng nó bản vẫn cần phải <b>kích hoạt "
-"nó!</b>. Hãy đăng nhập vào <b><u>osu!(bản game)</u></b> từ account mà bạn "
-"tạo ra. <b>Hiện giờ <u>email xác thực chưa được gửi đến bạn</u>. Tất cả "
+"Tài khoản của bạn đã được tạo rồi, nhưng bạn vẫn cần phải <b>kích hoạt "
+"nó!</b>. Hãy đăng nhập vào <b><u>osu!</u></b> bằng tài khoản mà bạn "
+"vừa tạo ra. <b>Hiện tại <u>chưa có xác nhận bằng email</u>. Tất cả "
 "những gì bạn phải làm là kết nối với Ripple từ client osu!</b> Nếu bạn gặp "
 "phải vấn đề, <a href='/doc/1'>hãy theo hướng dẫn này</a> "
 
@@ -204,7 +203,7 @@ msgid "<a href='/doc/1'>The Guide,</a> tl;dr version"
 msgstr "<a href='/doc/1'>Hướng dẫn,</a> tl;dr version"
 
 msgid "Download the server switcher"
-msgstr "Tải chương trình giúp đổi server"
+msgstr "Tải chương trình đổi server"
 
 msgid "Extract it, disable your antivirus, execute it <b>as administrator</b>"
 msgstr "Giải nén file, tắt antivirus và chạy bằng <b>administrator</b>"
@@ -216,7 +215,7 @@ msgid ""
 "Make sure the switcher says you're playing on <b>Ripple</b> server, if not "
 "click <b>On/Off</b>"
 msgstr ""
-"Hãy chắc rằng switcher hiện you're playing on <b>Ripple</b> server, nếu "
+"Hãy chắc rằng switcher hiện "you're playing on <b>Ripple</b> server", nếu "
 "không ấn <b>On/Off</b>"
 
 msgid ""
@@ -233,7 +232,7 @@ msgid ""
 msgstr ""
 
 msgid "Waiting for verification"
-msgstr "Chờ đợi việc xác thực của bạn "
+msgstr "Đang chờ xác thực "
 
 # register/welcome.html
 msgid "Welcome!"
@@ -274,13 +273,13 @@ msgid "Login"
 msgstr "Đăng nhập"
 
 msgid "Rules"
-msgstr "Các quy tắc"
+msgstr "Bộ luật"
 
 msgid "Documentation"
 msgstr "Tài liệu"
 
 msgid "Server switcher"
-msgstr ""
+msgstr "Trình đổi server"
 
 msgid "Status"
 msgstr "Tình trạng"
@@ -292,22 +291,22 @@ msgid "Subreddit"
 msgstr "Subreddit"
 
 msgid " - in case you don't know where to start"
-msgstr "- Nếu như bạn không biết bắt đầu từ đâu"
+msgstr " - trong trường hợp bạn không biết bắt đầu từ đâu"
 
 msgid " - in case you haven't already read them"
-msgstr "- Nếu bạn chưa đọc nó"
+msgstr " - trong trường hợp bạn chưa đọc nó"
 
 msgid " - in case, well, you need help doing stuff"
-msgstr "- Nếu bạn cần, hm. . ., sự giúp đỡ"
+msgstr " - trong trường hợp bạn cần, hm..., sự giúp đỡ"
 
 msgid " - in case you believe Ripple is down"
-msgstr ""
+msgstr " - trong trường hợp bạn nghĩ rằng Ripple đang sập"
 
 msgid " - in case you want to talk with people about Ripple"
-msgstr "- Nếu bạn muốn giới thiệu cho người khác về Ripple"
+msgstr "- trong trường hợp bạn muốn giới thiệu cho người khác về Ripple"
 
 msgid " - just in case"
-msgstr ""
+msgstr " - trong trường hợp bạn"
 
 # 2fa_gateway_recover.html
 msgid "Recover account"
@@ -322,17 +321,17 @@ msgid ""
 msgstr ""
 
 msgid "Oh no you don't."
-msgstr ""
+msgstr "Erhm, không, bạn không được."
 
 msgid "Get out."
-msgstr ""
+msgstr "Ra ngoài."
 
 msgid "Recovery code is invalid."
 msgstr "Recovery code không hợp lệ"
 
 # register/elmo.html
 msgid "Elmo! Stop!"
-msgstr "Ê! Dừng lại!"
+msgstr "Elmo! Dừng lại!"
 
 msgid "Stop!"
 msgstr "Dừng lại!"
@@ -363,7 +362,7 @@ msgid ""
 "your specific case."
 msgstr ""
 "nếu bạn sống với %s và bạn không có máy tính riêng để đăng nhập vào Ripple, "
-"hãy liên hệ tới support@ripple.moe , chúng tôi sẽ xứ lí trường hợp này cho "
+"hãy liên hệ tới support@ripple.moe, chúng tôi sẽ xứ lí trường hợp này cho "
 "riệng bạn"
 
 msgid ""
