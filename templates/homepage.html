@@ -99,7 +99,7 @@ margin-bottom: 10px;
 	<div class="ui segment">
 		<h1 class="ui header">{{ .T "Howdy, %s!" .Context.User.Username }}</h1>
 		<p>
-			{{ $OnlineUsers := .Get "https://c.ainu.pw/api/v1/onlineUsers" }}
+			{{ $OnlineUsers := .Get "https://c.osuvnfc.xyz/api/v1/onlineUsers" }}
 			{{ .T "Welcome back to OsuVNFC! Hiện tại có <b>%s người đang online và %s tổng số người đã đăng kí.</b> Do kinh phí hạn hẹp nên server hơi bị lag, nếu bạn thấy thích có thể donate cho chúng mình để phát triển và duy trì hoạt động bằng cách DM discord mình @stiendat#8017 để biết thêm. Cảm ơn vì đã chơi trên server của mình. Server Discord https://discord.gg/YdHUZFb" (rediget "ripple:online_users") (rediget "ripple:registered_users") | html }}
 		</p>
 	</div>
